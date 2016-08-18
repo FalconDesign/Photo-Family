@@ -1,0 +1,580 @@
+/*  =====================
+      Basic Styles
+    ====================*/
+
+$my-green: #16a085;
+$my-orange: #fc7855;
+$my-dark: #373737;
+
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+
+}
+
+.btn {
+  margin-top: 25px;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 5px;
+  background: $my-green;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+
+  @media (min-width: 768px){
+    &:hover {
+      background: #fc7855
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    background: $my-orange
+  }
+}
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: " ";
+}
+
+/*  =====================
+      Header and Banner Styles
+    ====================*/
+
+.main-header {
+  min-height: 745px;
+  background: url('../img-compressed/bg.jpg') center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    .li-img {
+      order: -1;
+    }
+    li {
+        padding-top: 10px;
+        text-align: center;
+
+      a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        letter-spacing: 1.5px;
+        font-size: 16px;
+
+        &:hover,
+        &:focus {
+          color: $my-orange
+        }
+      }
+    }
+
+/*   ========================================
+          Media Styles for larger screens
+    ======================================== */
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: 768px;
+      width: 100%;
+
+      .li-img {
+        order: initial;
+      }
+      li a {
+        &:hover {
+          color: $my-green;
+        }
+      }
+    }
+
+
+  }
+.get-sturted {
+  margin-top: 100px;
+  color: white;
+  text-align: center;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  font-size: 16px;
+
+  @media (min-width: 768px) {
+    margin-top: 250px;
+  }
+
+  span {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 36px;
+  }
+}
+  .social {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+    margin-top: 210px;
+    width: 100px;
+
+    @media (min-width: 768px) {
+      margin-top: 225px;
+    }
+
+    .icon {
+      width: 26px;
+      height: 22px;
+      cursor: pointer;
+    }
+    .tweetter {
+      background: url('../img-compressed/social.png');
+      background-repeat: no-repeat;
+
+      &:hover {
+        background-position: -2px -31px;
+      }
+    }
+    .flickr {
+      background: url('../img-compressed/social.png') -37px 0px;
+      background-repeat: no-repeat;
+
+      &:hover {
+        background-position: -39px -31px;
+      }
+    }
+    .dribble {
+      background: url('../img-compressed/social.png') -77px 0px;
+      background-repeat: no-repeat;
+
+      &:hover {
+        background-position: -79px -31px;
+      }
+    }
+  }
+}
+
+
+/*  =====================
+      Section Styles
+    ====================*/
+.represent {
+  background: url('../img-compressed/bg-section-1.jpg') center center;
+
+}
+
+.design {
+  background: url('../img-compressed/section-bg-2.jpg') center center;
+
+
+}
+
+.simple-section {
+  padding-top: 1px;
+  min-height: 490px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $my-dark;
+
+  .content-container {
+    margin: 50px auto 0px auto;
+    margin-top: 50px;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 1024px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+
+    @media (min-width: 768px) {
+      margin-top: 110px;
+      width: 100%;
+      text-align: left;
+
+      .wrap {
+        float: right;
+      }
+
+    }
+
+    h1 {
+      margin: 0px;
+      margin-bottom: 15px;
+      color: $my-green;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 25px;
+    }
+  }
+
+}
+
+
+
+.community {
+  padding-top: 1px;
+  padding-bottom: 25px;
+  min-height: 480px;
+  background: #f5f6f7;
+
+  .com-container {
+    margin-top: 25px;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+
+    .logo {
+      h1 {
+        margin: 30px 0 25px 0;
+        color: $my-dark;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 20px;
+      }
+      span {
+        color: $my-dark;
+        line-height: 24px;
+      }
+    }
+    .arrow-container {
+      .arrow {
+        display: inline-block;
+        width: 11px;
+        height: 16px;
+        cursor: pointer;
+      }
+      .left {
+        margin-right: 16px;
+        background: url('../img/arrows.png');
+        background-repeat: no-repeat;
+
+        &:hover {
+          background-position: 0px -27px;
+        }
+      }
+      .right {
+        background: url('../img/arrows.png') -27px 0px;
+        background-repeat: no-repeat;
+
+        &:hover {
+          background-position: -27px -27px;
+        }
+      }
+    }
+    .slide {
+      position: relative;
+      overflow: hidden;
+      margin: 0px auto;
+      max-width: 370px;
+      width: 100%;
+      height: 245px;
+
+      .wrap {
+        @keyframes moveLeft {
+          0% {margin-left: 0px;}
+          100%{margin-left: -365px;}
+        }
+        @keyframes moveRight {
+          0% {margin-left: 0px;}
+          100%{margin-left: 365px;}
+        }
+
+        position: absolute;
+        left: -370px;
+        width: 2000px;
+        text-align: left;
+
+        .moveLeft {
+          transition: margin-left 200ms linear;
+          animation: moveLeft 200ms linear;
+        }
+        .moveRight {
+          transition: margin-left 200ms linear;
+          animation: moveRight 200ms linear;
+        }
+        img {
+          max-width: 370px;
+          width: 100%;
+        }
+      }
+    }
+
+  }
+  @media (min-width: 768px) {
+    .slider-wrap {
+      .slide {
+        max-width: 760px;
+        width: 100%;
+
+        .wrap {
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+      .arrow-container {
+        .wrap {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  @media (min-width: 1011px) {
+    .com-container {
+      margin: 120px auto 0 auto;
+      max-width: 1024px;
+      width: 100%;
+    }
+    .logo {
+      float: left;
+    }
+    .slider-wrap {
+      float: right;
+
+      .slide {
+        img {
+          margin-right: 10px;
+        }
+        img:first-child {
+          margin-right: 0px;
+        }
+      }
+      .arrow-container {
+        margin-right: 10px;
+        width: 760px;
+        text-align: right;
+
+        .wrap {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+
+
+.subscribe {
+    padding-top: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    min-height: 490px;
+    background: url('../img/community-bg.jpg') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  .sub-container {
+    margin-top: 120px;
+    text-align: center;
+
+    form {
+      position: relative;
+      width: 100%;
+      input[type="email"] {
+        padding-left: 20px;
+        width: 100%;
+        height: 60px;
+        border: none;
+        border-radius: 5px;
+        color: $my-dark;
+        letter-spacing: 2px;
+        font-size: 16px;
+
+        &:focus {
+          outline: 0;
+        }
+      }
+      button {
+        margin-top: 10px;
+        width: 100%;
+        height: 60px;
+        border: 0px;
+        border-radius: 5px;
+        background: $my-green;
+        vertical-align: bottom;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+          outline: 0;
+          background: $my-orange
+        }
+        img {
+          margin-top: 6px;
+        }
+      }
+
+      @media (min-width: 370px) {
+        input[type="email"] {
+          max-width: 260px;
+          border-radius: 5px 0 0 5px;
+        }
+        button {
+          margin-top: 0px;
+          margin-left: -5px;
+          max-width: 63px;
+          border-radius: 0 5px 5px 0;
+        }
+      }
+    }
+    h1 {
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 24px;
+      matgin: 0px;
+    }
+
+  }
+
+  @media (min-width: 768px) {
+    min-height: 790px;
+
+    .sub-container {
+      margin-top: 350px;
+    }
+  }
+
+}
+
+.download {
+  padding-top: 1px;
+  min-height: 480px;
+  background: #f5f6f7;
+
+  .container {
+    margin: 95px auto 0px auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 896px;
+    width: 100%;
+    text-align:center;
+
+    h1 {
+      color: $my-dark;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 25px;
+    }
+    span {
+      color: $my-dark;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+    }
+    .wrap {
+      @media (min-width: 768px) {
+        div button {
+          width: 80%;
+        }
+        div:first-child {
+          float: left;
+          width: 47%;
+        }
+        div:last-child {
+          float: right;
+          width: 47%;
+        }
+      }
+
+      div {
+        margin-right: 10px;
+        margin-left: 10px;
+
+        button {
+          padding: 0px;
+          width: 70%;
+          height: 62px;
+          border-radius: 5px 0px 0px 5px;
+          background: #1abc9c;
+          text-transform: uppercase;
+          font-size: 16px;
+
+          &:hover,
+          &:focus {
+            background: $my-orange
+          }
+        }
+        span {
+          display: inline-block;
+          width: 62px;
+          height: 62px;
+          border-radius: 0px 5px 5px 0px;
+          background: $my-green;
+          vertical-align: bottom;
+
+          img {
+            margin-top: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  min-height: 130px;
+
+  @media (min-width: 768px) {
+    .wrap {
+      float: left;
+    }
+    img {
+      float: right;
+    }
+  }
+
+  .container {
+    margin: 0px auto;
+    padding-top: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 1024px;
+    width: 100%;
+    text-align: center;
+
+    ul {
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      li {
+        display: inline-block;
+
+        a {
+          color: $my-dark;
+          text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          font-weight: bold;
+          font-size: 12px;
+
+          @media (min-width: 768px) {
+            font-size: 14px;
+          }
+
+          &:hover,
+          &:focus {
+            color: $my-green;
+          }
+        }
+      }
+    }
+  img {
+    padding-top: 20px;
+    }
+  }
+}

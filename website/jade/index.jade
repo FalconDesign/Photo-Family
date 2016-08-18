@@ -1,0 +1,109 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title Your Life - A Foto
+    link(href="https://fonts.googleapis.com/css?family=Nunito:300,400,700", rel="stylesheet")
+    link(rel="stylesheet", type="text/css", href="normalize.css")
+    link(rel="stylesheet", type="text/css", href="all.css")
+    link(rel="Icon", href="../img-compressed/logo-com.png")
+    
+  body
+    #page
+      header.main-header
+        .container
+          ul.main-nav
+            li: a(href="#community") COMMUNITY
+            li: a(href="#subscribe") SUBSCRIBE
+            li.li-img
+               img(src="../img-compressed/foto.png", alt="main-icon")
+            li: a(href="#design") DESIGN
+            li: a(href="#download") DOWNLOAD
+          .get-sturted
+            span
+              | YOUR LIFE, A PHOTO
+            br 
+            | print your life in a simple pfoto
+            br
+            button.btn GET STARTED
+          .social
+            .icon.tweetter
+            .icon.dribble
+            .icon.flickr  
+                
+      section.represent.simple-section
+        .content-container
+          h1 Represent your life with </br> a simple photo
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit, </br>
+          | sed do eiusmod tempor incididunt ut labore et dolore </br>
+          | magna aliqua. Ut <b> enim ad minim veniam </b> , quis </br>
+          | nostrud exercitation ullamco laboris nisi </br>
+          | ut aliquip ex ea commodo consequat.
+          br
+          button.btn GET STARTED 
+                 
+      section.design.simple-section#design
+        .content-container.clearfix
+          .wrap      
+            h1 Design
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, </br>
+            | sed do eiusmod tempor incididunt ut labore et dolore </br>
+            | magna aliqua. Ut <b> enim ad minim veniam </b> , quis </br>
+            | nostrud exercitation ullamco laboris nisi </br>
+            | ut aliquip ex ea commodo consequat.
+            br
+            button.btn LEARN MORE
+      
+      section.community#community
+          .com-container.clearfix
+            .logo
+              img(src="../img/logo-com.png", alt="Photo-family")
+              h1 our community
+              span Lorem ipsum dolor sit</br> amet, consectetur</br> adipiscing elit.
+              
+            .slider-wrap
+              .arrow-container
+                .wrap
+                  .arrow.left
+                  .arrow.right
+              .slide
+                .wrap.slide-container
+                  img(src="../img/slide-1.jpg", alt="slide")
+                  img(src="../img/slide-2.jpg", alt="slide")
+                  img(src="../img/slide-1.jpg", alt="slide")
+                  img(src="../img/slide-2.jpg", alt="slide")
+                  
+      section.subscribe#subscribe
+        .sub-container
+          h1 subscripe to our community
+          form
+            input(type="email", placeholder="YOUR EMAIL")
+            button(type="submit")
+              img(src="../img/arrow.png", alt="arrow")
+          
+      section.download#download
+        .container
+          h1 download it
+          span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          .wrap.clearfix
+            div
+              button.btn Apple Store
+              span
+                img(src="../img/apple.png", alt="apple")
+            div
+              button.btn Play Market
+              span
+                img(src="../img/android.png", alt="android")
+      
+      footer
+        .container.clearfix
+          .wrap
+            ul
+              li: a(href="#") credits |&nbsp;
+              li: a(href="#") privacy |&nbsp;
+              li: a(href="#") our teem
+            span Developed by Dmitry Lysenko. </br>Created by Gianluca Cosetta. 
+          img(src="../img/logo-com.png", alt="logo")
+            
+    script(src="smooth-scroll.min.js")
+    script(src="function.js")
