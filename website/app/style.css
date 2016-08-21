@@ -18,9 +18,10 @@
   @media (min-width: 768px) {
     .btn:hover {
       background: #fc7855; } }
-  .btn:hover, .btn:focus {
-    outline: 0;
+  .btn:hover {
     background: #fc7855; }
+  .btn:focus {
+    outline: 0; }
 
 .clearfix::after {
   display: block;
@@ -54,7 +55,7 @@
         text-decoration: none;
         letter-spacing: 1.5px;
         font-size: 16px; }
-        .main-header .main-nav li a:hover, .main-header .main-nav li a:focus {
+        .main-header .main-nav li a:hover {
           color: #fc7855; }
     @media (min-width: 768px) {
       .main-header .main-nav {
@@ -117,10 +118,19 @@
       Section Styles
     ====================*/
 .represent {
-  background: url("../img-compressed/bg-section-1.jpg") center center; }
-
-.design {
-  background: url("../img-compressed/section-bg-2.jpg") center center; }
+  background: #f5f6f7; }
+  .represent .content-container .hand {
+    margin-left: -30px;
+    max-width: 90vw; }
+  @media (min-width: 768px) {
+    .represent {
+      overflow: hidden;
+      max-height: 480px; }
+      .represent .content-container .wrap {
+        float: left !important; }
+      .represent .content-container .hand {
+        float: right;
+        margin-top: -270px; } }
 
 .simple-section {
   padding-top: 1px;
@@ -137,14 +147,26 @@
     width: 100%;
     text-align: center;
     font-size: 16px;
-    line-height: 24px; }
+    line-height: 24px;
+    padding-bottom: 50px; }
+    .simple-section .content-container .wrap {
+      padding-bottom: 50px; }
+    .simple-section .content-container .phone {
+      max-width: 80vw; }
     @media (min-width: 768px) {
       .simple-section .content-container {
-        margin-top: 110px;
+        margin-top: 50px;
         width: 100%;
         text-align: left; }
         .simple-section .content-container .wrap {
-          float: right; } }
+          float: right;
+          width: 100%;
+          max-width: 450px;
+          padding-left: 15px;
+          padding-right: 15px; }
+        .simple-section .content-container .phone {
+          max-width: 250px;
+          vertical-align: middle; } }
     .simple-section .content-container h1 {
       margin: 0px;
       margin-bottom: 15px;
@@ -205,26 +227,32 @@
   0% {
     margin-left: 0px; }
   100% {
-    margin-left: -365px; } }
+    margin-left: 365px; } }
 
 @keyframes moveRight {
   0% {
     margin-left: 0px; }
   100% {
-    margin-left: 365px; } }
+    margin-left: -365px; } }
         .community .com-container .slide .wrap .moveLeft {
           transition: margin-left 200ms linear;
-          animation: moveLeft 200ms linear; }
+          animation: moveLeft 200ms linear;
+          margin-left: 365px; }
         .community .com-container .slide .wrap .moveRight {
           transition: margin-left 200ms linear;
-          animation: moveRight 200ms linear; }
+          animation: moveRight 200ms linear;
+          margin-left: -365px; }
         .community .com-container .slide .wrap img {
           max-width: 370px;
           width: 100%; }
   @media (min-width: 768px) {
     .community .slider-wrap .slide {
-      max-width: 760px;
+      max-width: 750px;
       width: 100%; }
+      .community .slider-wrap .slide .wrap img:first-child {
+        margin-right: 0px; }
+      .community .slider-wrap .slide .wrap img:nth-child(3) {
+        margin-right: 0px; }
       .community .slider-wrap .slide .wrap img {
         margin-right: 10px; }
     .community .slider-wrap .arrow-container .wrap {
@@ -238,10 +266,6 @@
       float: left; }
     .community .slider-wrap {
       float: right; }
-      .community .slider-wrap .slide img {
-        margin-right: 10px; }
-      .community .slider-wrap .slide img:first-child {
-        margin-right: 0px; }
       .community .slider-wrap .arrow-container {
         margin-right: 10px;
         width: 760px;

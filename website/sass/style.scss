@@ -5,6 +5,7 @@
 $my-green: #16a085;
 $my-orange: #fc7855;
 $my-dark: #373737;
+$my-bg: #f5f6f7;
 
 
 
@@ -31,10 +32,11 @@ $my-dark: #373737;
     }
   }
 
-  &:hover,
+  &:hover {
+    background:$my-orange
+  }
   &:focus {
     outline: 0;
-    background: $my-orange
   }
 }
 
@@ -74,8 +76,7 @@ $my-dark: #373737;
         letter-spacing: 1.5px;
         font-size: 16px;
 
-        &:hover,
-        &:focus {
+        &:hover {
           color: $my-orange
         }
       }
@@ -172,15 +173,29 @@ $my-dark: #373737;
       Section Styles
     ====================*/
 .represent {
-  background: url('../img-compressed/bg-section-1.jpg') center center;
+  background: $my-bg;
+  .content-container {
+    .hand {
+      margin-left: -30px;
+      max-width: 90vw;
+    }
+  }
+  @media (min-width: 768px) {
+    overflow: hidden;
+    max-height: 480px;
 
+    .content-container {
+      .wrap {
+        float: left !important;
+      }
+      .hand {
+        float: right;
+        margin-top: -270px;
+      }
+    }
+  }
 }
 
-.design {
-  background: url('../img-compressed/section-bg-2.jpg') center center;
-
-
-}
 
 .simple-section {
   padding-top: 1px;
@@ -199,14 +214,30 @@ $my-dark: #373737;
     text-align: center;
     font-size: 16px;
     line-height: 24px;
+    padding-bottom: 50px;
+    .wrap {
+      padding-bottom: 50px;
+    }
+    .phone {
+      max-width: 80vw;
+    }
 
     @media (min-width: 768px) {
-      margin-top: 110px;
+      margin-top: 50px;
       width: 100%;
       text-align: left;
 
       .wrap {
         float: right;
+        width: 100%;
+        max-width: 450px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .phone {
+        max-width: 250px;
+        vertical-align: middle;
       }
 
     }
@@ -229,7 +260,7 @@ $my-dark: #373737;
   padding-top: 1px;
   padding-bottom: 25px;
   min-height: 480px;
-  background: #f5f6f7;
+  background: $my-bg;
 
   .com-container {
     margin-top: 25px;
@@ -284,27 +315,29 @@ $my-dark: #373737;
       height: 245px;
 
       .wrap {
-        @keyframes moveLeft {
-          0% {margin-left: 0px;}
-          100%{margin-left: -365px;}
-        }
-        @keyframes moveRight {
-          0% {margin-left: 0px;}
-          100%{margin-left: 365px;}
-        }
-
         position: absolute;
         left: -370px;
         width: 2000px;
         text-align: left;
 
+        @keyframes moveLeft {
+          0% {margin-left: 0px;}
+          100%{margin-left: 365px;}
+        }
+        @keyframes moveRight {
+          0% {margin-left: 0px;}
+          100%{margin-left: -365px;}
+        }
+
         .moveLeft {
           transition: margin-left 200ms linear;
           animation: moveLeft 200ms linear;
+          margin-left: 365px;
         }
         .moveRight {
           transition: margin-left 200ms linear;
           animation: moveRight 200ms linear;
+          margin-left: -365px;
         }
         img {
           max-width: 370px;
@@ -317,10 +350,16 @@ $my-dark: #373737;
   @media (min-width: 768px) {
     .slider-wrap {
       .slide {
-        max-width: 760px;
+        max-width: 750px;
         width: 100%;
-
         .wrap {
+          img:first-child {
+            margin-right: 0px;
+          }
+
+          img:nth-child(3) {
+            margin-right: 0px;
+          }
           img {
             margin-right: 10px;
           }
@@ -345,14 +384,6 @@ $my-dark: #373737;
     .slider-wrap {
       float: right;
 
-      .slide {
-        img {
-          margin-right: 10px;
-        }
-        img:first-child {
-          margin-right: 0px;
-        }
-      }
       .arrow-container {
         margin-right: 10px;
         width: 760px;
@@ -454,7 +485,7 @@ $my-dark: #373737;
 .download {
   padding-top: 1px;
   min-height: 480px;
-  background: #f5f6f7;
+  background: $my-bg;
 
   .container {
     margin: 95px auto 0px auto;
